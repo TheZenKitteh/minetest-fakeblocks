@@ -690,26 +690,6 @@ minetest.register_node("fakeblocks:default_desert_stone", {
 })
 
 minetest.register_craft({
-	output = "fakeblocks:default_dirt_with_grass",
-	recipe = {
-		{"default:sand", "default:dirt", "default:sand"},
-		{"default:sand", "default:dirt", "default:sand"},
-		{"default:sand", "default:sand", "default:sand"},
-	},
-})
-
-minetest.register_node("fakeblocks:default_dirt_with_grass", {
-	description = "Fake Dirt with Grass Block",
-	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
-	walkable = false,
-	is_ground_content = true,
-	groups = {crumbly=3},
-	sounds = default.node_sound_dirt_defaults({
-	footstep = {name="default_grass_footstep", gain=0.4},
-	},
-})
-
-minetest.register_craft({
 	output = "fakeblocks:default_wood",
 	recipe = {
 		{"default:sand", "default:sand", "default:sand"},
