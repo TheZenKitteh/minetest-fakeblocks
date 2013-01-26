@@ -488,6 +488,8 @@ minetest.register_node("fakeblocks:various_lawngrass", {
 
 -- End Various Mod
 
+-- Start Obsidian Mod
+
 minetest.register_craft({
 	output = "fakeblocks:obsidian_obsidian_block",
 	recipe = {
@@ -516,4 +518,251 @@ minetest.register_node("fakeblocks:obsidian_obsidian_block", {
 
 -- End Obsidian Mod
 
+-- Start Default Mod
+minetest.register_craft({
+	output = "fakeblocks:default_sand",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
 
+minetest.register_node("fakeblocks:default_sand", {
+	description = "Fake Sand Block",
+	tiles = {"default_sand.png"},
+	inventory_image = minetest.inventorycube("default_sand.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {crumbly=3, falling_node=1, sand=1},
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_dirt",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:dirt", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_dirt", {
+	description = "Fake Dirt Block",
+	tiles = {"default_dirt.png"},
+	inventory_image = minetest.inventorycube("default_dirt.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {crumbly=3},
+	sounds = default.node_sound_dirt_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_desert_sand",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:desert_sand", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_desert_sand", {
+	description = "Fake Deset Sand Block",
+	tiles = {"default_desert_sand.png"},
+	inventory_image = minetest.inventorycube("default_desert_sand.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {sand=1, crumbly=3, falling_node=1, sand=1},
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_sandstone",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:sandstone", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_sandstone", {
+	description = "Fake Sandstone Block",
+	tiles = {"default_sandstone.png"},
+	inventory_image = minetest.inventorycube("default_sandstone.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_brick",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:brick", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_brick", {
+	description = "Fake Brick Block",
+	tiles = {"default_brick.png"},
+	inventory_image = minetest.inventorycube("default_brick.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_tree",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:tree", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_tree", {
+	description = "Fake Tree Block",
+	tiles = {"default_tree.png"},
+	inventory_image = minetest.inventorycube("default_tree.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_bookshelf",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:bookshelf", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_bookshelf", {
+	description = "Fake Bookshelf",
+	tiles = {"default_wood.png", "default_wood.png", "default_bookshelf.png"},
+	walkable = false,
+	is_ground_content = true,
+	groups = {snappy=2,choppy=3,oddly_breakable_by_hand=2,flammable=3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_stone",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:stone", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_stone", {
+	description = "Fake Stone Block",
+	tiles = {"default_stone.png"},
+	inventory_image = minetest.inventorycube("default_stone.png"),
+	walkable = false,
+	is_ground_content = true,
+	legacy_mineral = true,
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_desert_stone",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:desert_stone", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_desert_stone", {
+	description = "Fake Desert Stone Block",
+	tiles = {"default_desert_stone.png"},
+	inventory_image = minetest.inventorycube("default_desert_stone.png"),
+	walkable = false,
+	is_ground_content = true,
+	legacy_mineral = true,
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_dirt_with_grass",
+	recipe = {
+		{"default:sand", "default:dirt", "default:sand"},
+		{"default:sand", "default:dirt", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_dirt_with_grass", {
+	description = "Fake Dirt with Grass Block",
+	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+	walkable = false,
+	is_ground_content = true,
+	groups = {crumbly=3},
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_grass_footstep", gain=0.4},
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_wood",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:wood", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_wood", {
+	description = "Fake Wood Block",
+	tiles = {"default_wood.png"},
+	inventory_image = minetest.inventorycube("default_wood.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_cobble",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:cobble", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_cobble", {
+	description = "Fake Cobble Block",
+	tiles = {"default_cobble.png"},
+	inventory_image = minetest.inventorycube("default_cobble.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {cracky=3, stone=2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "fakeblocks:default_tree",
+	recipe = {
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:sand", "default:tree", "default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+	},
+})
+
+minetest.register_node("fakeblocks:default_tree", {
+	description = "Fake Tree Block",
+	tiles = {"default_tree.png"},
+	inventory_image = minetest.inventorycube("default_tree.png"),
+	walkable = false,
+	is_ground_content = true,
+	groups = {tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+-- End Default Mod
