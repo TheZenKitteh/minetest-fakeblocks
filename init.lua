@@ -705,7 +705,8 @@ minetest.register_node("fakeblocks:default_dirt_with_grass", {
 	is_ground_content = true,
 	groups = {crumbly=3},
 	sounds = default.node_sound_dirt_defaults({
-		footstep = {name="default_grass_footstep", gain=0.4},
+	footstep = {name="default_grass_footstep", gain=0.4},
+	},
 })
 
 minetest.register_craft({
@@ -744,25 +745,6 @@ minetest.register_node("fakeblocks:default_cobble", {
 	is_ground_content = true,
 	groups = {cracky=3, stone=2},
 	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_craft({
-	output = "fakeblocks:default_tree",
-	recipe = {
-		{"default:sand", "default:sand", "default:sand"},
-		{"default:sand", "default:tree", "default:sand"},
-		{"default:sand", "default:sand", "default:sand"},
-	},
-})
-
-minetest.register_node("fakeblocks:default_tree", {
-	description = "Fake Tree Block",
-	tiles = {"default_tree.png"},
-	inventory_image = minetest.inventorycube("default_tree.png"),
-	walkable = false,
-	is_ground_content = true,
-	groups = {tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
-	sounds = default.node_sound_wood_defaults(),
 })
 
 -- End Default Mod
